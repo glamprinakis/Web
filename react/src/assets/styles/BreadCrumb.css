@@ -1,0 +1,35 @@
+.MuiChip-icon{
+    color: white !important;
+}
+.MuiChip-root{
+    height: 2rem !important;
+}
+.MuiChip-label{
+    color: white !important;
+    font-weight: bold;
+    font-size: 1rem !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-chip{
+    width: 7rem;
+}
+
+[data-bs-theme=light] .MuiButtonBase-root,[data-bs-theme=light] .MuiChip-root{
+    background: rgba(25,135,84, .7);
+}
+
+[data-bs-theme=dark] .MuiButtonBase-root,[data-bs-theme=dark] .MuiChip-root{
+    background: rgba(255, 193, 7, .7);
+}
+
+[data-bs-theme=dark] .MuiBreadcrumbs-separator{
+    color: white !important;
+}
+
+.MuiChip-root{
+    border-radius: 0.5rem !important;
+}

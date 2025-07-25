@@ -1,0 +1,39 @@
+.btn-square {
+    border: 1px solid #EEEEEE;
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    color:  #212529;
+    text-align: center;
+}
+
+.btn-rectangle {
+    border: 1px solid #EEEEEE;
+    width: 90px;
+    height: 44px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    color:  #212529;
+    text-align: center;
+}
+
+.btn-click {
+    color: #ffffff !important;
+    display: flex;
+    padding: 16px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.btn-click:hover {
+    background :var(--hover-color) !important;
+}
+
+@media only screen and (max-width: 450px) {
+    .btn-click {
+        padding: 10px 20px;
+    }
+}

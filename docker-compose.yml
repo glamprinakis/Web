@@ -1,0 +1,82 @@
+version: '3'
+services:
+  frontend:
+    build: ./react
+    container_name: react
+    environment:
+      WATCHPACK_POLLING: "true"
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    volumes:
+      - ./react:/app
+      - /app/node_modules
+    networks:
+      net0:
+        ipv4_address: 172.20.0.5
+
+  backend:
+    build: ./node
+    container_name: node
+    ports:
+      - "3005:3000"
+    expose:
+      - 3000
+    restart: always
+    depends_on:
+      - db  
+    links:   
+      - db
+    volumes:
+      - ./node:/app
+      - /app/node_modules
+    networks:
+      net0:
+        ipv4_address: 172.20.0.6
+
+  db:
+    image: mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_ROOT_USER=root
+      - MYSQL_ROOT_PASSWORD=xyz123
+      - MYSQL_DATABASE=visionstudio
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      net0:
+        ipv4_address: 172.20.0.7
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - mysql-data:/var/lib/mysql 
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - db  
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8000:80
+    networks:
+      net0:
+          ipv4_address: 172.20.0.8 
+
+volumes:
+  mysql-data:
+    name: mysql_volume
+  
+networks:
+  net0:
+    driver : bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

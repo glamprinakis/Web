@@ -1,0 +1,105 @@
+.login-container{
+    height: 33rem;
+    width: 70%;
+    border-radius: 1rem;
+    background-color: #1F4A33;
+}
+
+.login-container .left{
+    width: 60%;
+    position: relative;
+}
+
+.login-container .left .create-account-container{
+    height: 50%;
+    margin-left: 7rem;
+    margin-top: 20%;
+}
+
+.login-container .right{
+    width: 40%;
+}
+
+.login-container .right .login-form{
+    height: 80%;
+    width: 90%;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login-container .right .login-form input{
+    text-align: center;
+    font-size: 1.1rem;
+    width: 80%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.login-container .right .login-form input:focus-visible{
+    outline: 0 !important;
+    border: 2px solid rgb(31, 74, 51);
+}
+
+.login-container .right .login-form #login-email::placeholder, .login-container .right .login-form #login-password::placeholder{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.login-container .right .login-form .login-btn{
+    width: 60%;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+
+.login-container .right .login-form  a{
+    width: 100% !important;
+    font-size: 1rem;
+}
+
+.login-container .right .login-form  a:hover{
+    text-decoration: underline;
+    color: navy !important;
+}
+
+.login-container .left .new-customer{
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.2rem;
+}
+
+.login-container .left .register-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid white;
+    height: 4rem;
+    width: 40%;
+    background-color: #364c9e;
+    border-radius: 0.5rem;
+}
+
+.login-container .left .register-btn:hover{
+    background-color: #4965c9;
+}
+
+.login-container .left .back-btn{
+    font-size: 3rem;
+    color: rgba(255,255,255, 0.8) !important;
+}
+
+.login-container .left .back-btn span{
+    font-size: 1.5rem;
+}
+
+.login-container .left .image-hover{
+    position: absolute;
+    left: -5.5rem;
+    height: 20rem;
+}
+
+
+.login-container .left .back{
+    position: absolute;
+    bottom: 1rem;
+}
