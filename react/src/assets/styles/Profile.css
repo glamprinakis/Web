@@ -1,0 +1,52 @@
+.account-container{
+    margin-top: 5rem !important; 
+    height: 20rem;
+    width: 50rem;
+    border-radius: 2rem;
+}
+
+.account-container-left{
+    width: 40%;
+}
+
+.account-container-left .avatar{
+    border: 2px solid;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.account-container-left img{
+    max-height: 5rem;
+    max-width: 5rem;
+}
+
+.account-container-right{
+    width: 60%;
+}
+
+.account-container .username{
+    font-size: 2rem;
+}
+
+.account-container .description{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.account-container .account-form input{
+    width: 80%;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.account-container .account-form input::placeholder{
+    text-align: center;
+}
+
+.account-container .account-form input{
+    text-align: center;
+}
+
+.account-container .account-form input:focus{
+    border-color: unset;
+}

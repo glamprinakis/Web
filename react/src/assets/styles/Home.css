@@ -1,0 +1,102 @@
+.categories-title{
+    margin-top: 5rem;
+}
+
+.home-categories{
+    height: 25rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.category-card{
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 2rem;
+}
+
+.category-card img{
+    height: 70% !important;
+}
+
+.category-card span{
+    margin-top: 1rem;
+}
+
+.banner{
+    position: relative;
+    width: 55%;
+    height: 22rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    background: url(../images/home-banner.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.home-categories-title{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.btn-banner{
+    position: absolute;
+    bottom: 1rem;
+    right: 5rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: #4B3E97;
+    font-size: 1em;
+}
+
+.btn-banner:hover{
+    background-color: #8375d0;
+}
+
+.right-banner{
+    height: 22rem;
+    width: 40%;
+    right: 0;
+    top: 0;
+    border-radius: 0.5rem;
+    background-image: url(https://t3.ftcdn.net/jpg/04/71/00/20/360_F_471002062_tCBbTqeeMhHgMfCW86mQhdgpETooy3ID.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.right-banner img{
+    max-width: 65%;
+    max-height: 65%;
+}
+
+.right-banner span{
+    color: #FFF;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    -webkit-text-stroke: 1px white;
+}
+
+.right-banner-btn{
+    width: 10rem;
+    height: 3rem;
+    background-color: #4B3E97;
+    font-size: 1em;
+}
+
+.right-banner-btn:hover{
+    background-color: #8375d0;
+}

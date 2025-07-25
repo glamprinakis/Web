@@ -1,0 +1,19 @@
+:root{
+    --font-family: Poppins, sans-serif; 
+}
+
+html {
+    font-family: var(--font-family);
+}
+
+.section-5rem{
+    margin-top: 5rem;
+}
+
+.section-75rem{
+    margin-top: 7.5rem;
+}
+
+.textArea::placeholder {
+    padding: 1rem 0.8rem;
+}

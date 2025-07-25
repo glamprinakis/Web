@@ -1,0 +1,48 @@
+.top-container .top{
+    width: 75% !important;
+    margin-top: 3rem;
+}
+
+.top-container .bottom{
+    width: 75% !important;
+    margin-top: 2rem;
+}
+
+.top-container .left{
+    width: 40% !important;
+}
+
+.top-container .right{
+    width: 40%;
+}
+
+.contact-page .list-group-item{
+    padding-left: 0;
+    width: 17rem;
+}
+
+.contact-page .list-group-flush{
+    margin-left: 1rem;
+}
+
+.contact-page li{
+    display: list-item !important
+}
+
+.contact-page .right .form-input{
+    height: 3rem;
+    border-radius: 0.2rem;
+}
+
+.contact-page .right .form-input::placeholder{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact-page .right .form-container button{
+    padding: 1rem 3rem 1rem;
+}
+
+.contact-page .bottom .map{
+    height: 25rem;
+}

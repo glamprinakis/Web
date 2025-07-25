@@ -1,0 +1,41 @@
+
+.category-nav{
+    z-index: 9998 !important;
+    position: relative;
+}
+
+.menu{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    width: 100%;
+    height: unset;
+    left: 0;
+    top: 0;
+}
+
+.menu-title{    
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.menu-item{
+    border: 0 !important;
+    font-size: 1.3em;
+    text-decoration: none !important;
+    text-align: center !important;
+    transition: 0.2s;
+}
+
+.menu-item:hover{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+
+[data-bs-theme=light]  .menu-item:hover i, [data-bs-theme=light]  .menu-item:hover span{
+    color: #198754
+}
+
+ .menu-item:hover i, [data-bs-theme=dark]  .menu-item:hover span{
+    color: #ffc107
+}
