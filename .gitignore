@@ -23,4 +23,11 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 
-**/node_modules
+**/node_modules# Terraform files
+infra/.terraform/
+infra/.terraform.*
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/*.tfplan
+infra/*.tfplan.*
+*.tfvars
