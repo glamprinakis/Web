@@ -223,7 +223,7 @@ resource "aws_ecs_task_definition" "frontend" {
   ])
 }
 
-# Backend Task Definition
+# Backend Task Definition (updated for db credentials)
 resource "aws_ecs_task_definition" "backend" {
   family                   = "${var.project_name}-backend"
   network_mode             = "awsvpc"
@@ -236,7 +236,7 @@ resource "aws_ecs_task_definition" "backend" {
   container_definitions = jsonencode([
     {
       name  = "backend"
-      image = "${aws_ecr_repository.web.repository_url}:backend-amd64"
+      image = "${aws_ecr_repository.web.repository_url}:backend-amd64-v3"
       
       portMappings = [
         {
@@ -248,7 +248,7 @@ resource "aws_ecs_task_definition" "backend" {
       environment = [
         {
           name  = "DB_HOST"
-          value = module.db.db_instance_endpoint
+          value = module.db.db_instance_address
         },
         {
           name  = "DB_USER"
@@ -260,7 +260,7 @@ resource "aws_ecs_task_definition" "backend" {
         },
         {
           name  = "DB_NAME"
-          value = module.db.db_instance_identifier
+          value = "visionstudio"
         },
         {
           name  = "NODE_ENV"
@@ -411,6 +411,7 @@ module "db" {
   instance_class       = "db.t3.micro"
   allocated_storage    = 20
 
+  db_name              = "visionstudio"
   username             = var.db_username
   password             = var.db_password
 
