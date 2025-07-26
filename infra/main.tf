@@ -200,7 +200,7 @@ resource "aws_ecs_task_definition" "frontend" {
   container_definitions = jsonencode([
     {
       name  = "frontend"
-      image = "${aws_ecr_repository.web.repository_url}:frontend"
+      image = "${aws_ecr_repository.web.repository_url}:frontend-amd64"
       
       portMappings = [
         {
@@ -236,7 +236,7 @@ resource "aws_ecs_task_definition" "backend" {
   container_definitions = jsonencode([
     {
       name  = "backend"
-      image = "${aws_ecr_repository.web.repository_url}:backend"
+      image = "${aws_ecr_repository.web.repository_url}:backend-amd64"
       
       portMappings = [
         {
@@ -325,7 +325,7 @@ resource "aws_lb_target_group" "backend" {
 
 # ALB Listeners
 resource "aws_lb_listener" "frontend" {
-  load_balancer_arn = module.alb.lb_arn
+  load_balancer_arn = module.alb.arn
   port              = "80"
   protocol          = "HTTP"
 

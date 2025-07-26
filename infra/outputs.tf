@@ -22,3 +22,23 @@ output "alb_dns_name" {
   description = "DNS name of the ALB"
   value       = module.alb.dns_name
 }
+
+output "frontend_service_name" {
+  description = "ECS Frontend service name"
+  value       = aws_ecs_service.frontend.name
+}
+
+output "backend_service_name" {
+  description = "ECS Backend service name"
+  value       = aws_ecs_service.backend.name
+}
+
+output "application_url" {
+  description = "Application URL"
+  value       = "http://${module.alb.dns_name}"
+}
+
+output "api_url" {
+  description = "API URL"
+  value       = "http://${module.alb.dns_name}/api"
+}
