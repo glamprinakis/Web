@@ -1,0 +1,18 @@
+cd /path/to/Web/infra
+
+# 1) Prevent any AWS CLI pager from “blocking”
+export AWS_PAGER=""
+aws configure set cli_pager ""
+
+# 2) Confirm your identity & region
+aws sts get-caller-identity
+aws configure get region
+
+# 3) Fill these in with your real names (what you created earlier)
+REGION="eu-central-1"
+BUCKET="<your S3 bucket name>"
+TABLE="<your DynamoDB table name>"
+
+# 4) Make sure they exist
+aws s3api get-bucket-location --bucket "$BUCKET"
+aws dynamodb describe-table --region "$REGION" --table-name "$TABLE" --query "Table.TableStatus"
