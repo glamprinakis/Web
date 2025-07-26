@@ -1,4 +1,4 @@
-
+# Special Topics in User Interface Interaction Design (HMMY281) Course Project
 
 ### The main goal for this project is to redesign a web app (in our case a well known e-shop) in order to achieve better interaction between end users and the app interface
 
